@@ -138,7 +138,6 @@ def resolve_debt(from_id: str, to_id: str, amount: float):
         to_debt=lender.current_debt)
 
     database.members_db[borrower.id].current_debt -= amount
-    database.members_db[lender.id].current_debt += amount
 
     database.members_db[borrower.id].transactions.append(transaction)
     database.members_db[lender.id].transactions.append(transaction)
