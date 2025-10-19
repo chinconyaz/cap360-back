@@ -1,0 +1,11 @@
+[2025-10-19T03:04:44.667Z] Error: Request failed with status 200: 
+Stack:
+Error: Request failed with status 200: 
+    at c (/root/.npm/_npx/a3521d5d8f143c4a/node_modules/@hey-api/openapi-ts/dist/index.cjs:47:9586)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Promise.all (index 0)
+    at async na (/root/.npm/_npx/a3521d5d8f143c4a/node_modules/@hey-api/openapi-ts/dist/index.cjs:47:9698)
+    at async /root/.npm/_npx/a3521d5d8f143c4a/node_modules/@hey-api/openapi-ts/dist/index.cjs:1352:6888
+    at async Promise.all (index 0)
+    at async LH (/root/.npm/_npx/a3521d5d8f143c4a/node_modules/@hey-api/openapi-ts/dist/index.cjs:1352:6835)
+    at async start (/root/.npm/_npx/a3521d5d8f143c4a/node_modules/@hey-api/openapi-ts/bin/index.cjs:132:21)

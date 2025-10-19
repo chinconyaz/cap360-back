@@ -1,0 +1,158 @@
+{
+  "336d3610-9611-4d5f-bceb-8364c2150c89": {
+    "id": "336d3610-9611-4d5f-bceb-8364c2150c89",
+    "name": "Chinconyaz",
+    "members": [
+      {
+        "id": "b03f6205-6848-44eb-972e-2ae131206d9a",
+        "first_name": "Chinmay",
+        "last_name": "Mangalwedhe",
+        "balance": 500.0,
+        "nessie_customer_id": null,
+        "nessie_account_id": [],
+        "transactions": [],
+        "debts": {},
+        "transactions_visible_to": {},
+        "family_id": "336d3610-9611-4d5f-bceb-8364c2150c89"
+      },
+      {
+        "id": "04b05e25-978f-4054-91eb-85296dd28564",
+        "first_name": "Aiyaz",
+        "last_name": "Mostofa",
+        "balance": 500.0,
+        "nessie_customer_id": null,
+        "nessie_account_id": [],
+        "transactions": [],
+        "debts": {},
+        "transactions_visible_to": {},
+        "family_id": "336d3610-9611-4d5f-bceb-8364c2150c89"
+      },
+      {
+        "id": "ab074d34-a984-42dd-b042-034687292120",
+        "first_name": "Connor",
+        "last_name": "Carey",
+        "balance": 500.0,
+        "nessie_customer_id": null,
+        "nessie_account_id": [],
+        "transactions": [],
+        "debts": {},
+        "transactions_visible_to": {},
+        "family_id": "336d3610-9611-4d5f-bceb-8364c2150c89"
+      }
+    ],
+    "transactions": []
+  },
+  "572e5736-7d0b-4cba-912d-a10f9b1dddfb": {
+    "id": "572e5736-7d0b-4cba-912d-a10f9b1dddfb",
+    "name": "chinconyaz",
+    "members": [
+      {
+        "id": "1d87ce85-bcca-4edd-a3a3-7ef15b072899",
+        "first_name": "Connor",
+        "last_name": "Carey",
+        "balance": 490.0,
+        "nessie_customer_id": "68f4aaef9683f20dd51a2149",
+        "nessie_account_id": [
+          {
+            "type": "Checking",
+            "nickname": "Connor's Account",
+            "rewards": 0,
+            "balance": 500,
+            "customer_id": "68f4aaef9683f20dd51a2149",
+            "_id": "68f4aaef9683f20dd51a214a"
+          }
+        ],
+        "transactions": [
+          "515757dd-49c9-4798-b72c-1fcdf2579cc2"
+        ],
+        "debts": {},
+        "transactions_visible_to": {
+          "a5fc522d-02a7-4684-9a3d-158a670de6db": 10.0
+        },
+        "family_id": null
+      },
+      {
+        "id": "a5fc522d-02a7-4684-9a3d-158a670de6db",
+        "first_name": "Chinmay",
+        "last_name": "Mangalwedhe",
+        "balance": 500.0,
+        "nessie_customer_id": "68f4aae69683f20dd51a2147",
+        "nessie_account_id": [
+          {
+            "type": "Checking",
+            "nickname": "Chinmay's Account",
+            "rewards": 0,
+            "balance": 500,
+            "customer_id": "68f4aae69683f20dd51a2147",
+            "_id": "68f4aae79683f20dd51a2148"
+          }
+        ],
+        "transactions": [
+          "515757dd-49c9-4798-b72c-1fcdf2579cc2",
+          "ed0492e8-067a-447e-8f4c-4b81a4d606d4"
+        ],
+        "debts": {
+          "1d87ce85-bcca-4edd-a3a3-7ef15b072899": 0.0
+        },
+        "transactions_visible_to": {
+          "05bc8ced-d663-4171-ba33-748b2118c556": 10.0
+        },
+        "family_id": null
+      },
+      {
+        "id": "05bc8ced-d663-4171-ba33-748b2118c556",
+        "first_name": "Aiyaz",
+        "last_name": "Mostofa",
+        "balance": 510.0,
+        "nessie_customer_id": "68f4aadc9683f20dd51a2145",
+        "nessie_account_id": [
+          {
+            "type": "Checking",
+            "nickname": "Aiyaz's Account",
+            "rewards": 0,
+            "balance": 500,
+            "customer_id": "68f4aadc9683f20dd51a2145",
+            "_id": "68f4aadc9683f20dd51a2146"
+          }
+        ],
+        "transactions": [
+          "ed0492e8-067a-447e-8f4c-4b81a4d606d4"
+        ],
+        "debts": {
+          "a5fc522d-02a7-4684-9a3d-158a670de6db": 0.0
+        },
+        "transactions_visible_to": {},
+        "family_id": null
+      }
+    ],
+    "transactions": [
+      {
+        "id": "515757dd-49c9-4798-b72c-1fcdf2579cc2",
+        "from_id": "1d87ce85-bcca-4edd-a3a3-7ef15b072899",
+        "to_id": "a5fc522d-02a7-4684-9a3d-158a670de6db",
+        "amount": 10.0,
+        "date": "2025-10-19T09:12:04.569888",
+        "description": "test1",
+        "settled": false
+      },
+      {
+        "id": "ed0492e8-067a-447e-8f4c-4b81a4d606d4",
+        "from_id": "a5fc522d-02a7-4684-9a3d-158a670de6db",
+        "to_id": "05bc8ced-d663-4171-ba33-748b2118c556",
+        "amount": 10.0,
+        "date": "2025-10-19T09:13:01.365382",
+        "description": "test1",
+        "settled": false
+      },
+      {
+        "id": "38f2965f-cf79-4d48-bbbb-e315b3632801",
+        "from_id": "1d87ce85-bcca-4edd-a3a3-7ef15b072899",
+        "to_id": "05bc8ced-d663-4171-ba33-748b2118c556",
+        "amount": 10.0,
+        "date": "2025-10-19T09:23:56.204851",
+        "description": "test1",
+        "settled": false
+      }
+    ]
+  }
+}

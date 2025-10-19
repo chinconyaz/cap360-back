@@ -1,0 +1,23 @@
+{
+  "a317fcb9-92f9-4dbb-8f37-4de65f55eca9": {
+    "id": "a317fcb9-92f9-4dbb-8f37-4de65f55eca9",
+    "nessie_id": null,
+    "name": "Amazon",
+    "category": "Shopping",
+    "location": "Austin, TX"
+  },
+  "597619b3-744e-44db-9d31-3311648bbed9": {
+    "id": "597619b3-744e-44db-9d31-3311648bbed9",
+    "nessie_id": null,
+    "name": "Walmart",
+    "category": "Grocery",
+    "location": "College Station, TX"
+  },
+  "3d2ac6db-ca04-494d-ba22-de44a0319145": {
+    "id": "3d2ac6db-ca04-494d-ba22-de44a0319145",
+    "nessie_id": null,
+    "name": "Cloudflare",
+    "category": "SWE",
+    "location": "Austin, TX"
+  }
+}

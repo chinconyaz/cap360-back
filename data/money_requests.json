@@ -1,0 +1,56 @@
+{
+  "ad533257-0f1a-4767-8bbb-94596d73d847": {
+    "id": "ad533257-0f1a-4767-8bbb-94596d73d847",
+    "from_id": "b03f6205-6848-44eb-972e-2ae131206d9a",
+    "to_id": "04b05e25-978f-4054-91eb-85296dd28564",
+    "amount": 50.0,
+    "date": "2025-10-19T09:09:25.049102",
+    "status": "pending",
+    "description": null
+  },
+  "2b224e0c-63a5-40e2-bb7c-9d21ec0a9ee5": {
+    "id": "2b224e0c-63a5-40e2-bb7c-9d21ec0a9ee5",
+    "from_id": "04b05e25-978f-4054-91eb-85296dd28564",
+    "to_id": "ab074d34-a984-42dd-b042-034687292120",
+    "amount": 12.0,
+    "date": "2025-10-19T09:12:22.983866",
+    "status": "pending",
+    "description": "Money request for $12.00"
+  },
+  "cea16096-4588-47c0-90ba-eb8d83fb849f": {
+    "id": "cea16096-4588-47c0-90ba-eb8d83fb849f",
+    "from_id": "04b05e25-978f-4054-91eb-85296dd28564",
+    "to_id": "b03f6205-6848-44eb-972e-2ae131206d9a",
+    "amount": 12.0,
+    "date": "2025-10-19T09:13:09.934444",
+    "status": "pending",
+    "description": "Money request for $12.00"
+  },
+  "b160c07e-4400-45fc-bd0c-b110b3326f99": {
+    "id": "b160c07e-4400-45fc-bd0c-b110b3326f99",
+    "from_id": "04b05e25-978f-4054-91eb-85296dd28564",
+    "to_id": "b03f6205-6848-44eb-972e-2ae131206d9a",
+    "amount": 12.0,
+    "date": "2025-10-19T09:13:47.963281",
+    "status": "pending",
+    "description": "Money request for $12.00"
+  },
+  "933cf957-4432-4cbd-b5c5-4de8a31a1789": {
+    "id": "933cf957-4432-4cbd-b5c5-4de8a31a1789",
+    "from_id": "04b05e25-978f-4054-91eb-85296dd28564",
+    "to_id": "b03f6205-6848-44eb-972e-2ae131206d9a",
+    "amount": 18.0,
+    "date": "2025-10-19T09:14:20.113256",
+    "status": "pending",
+    "description": "Money request for $18.00"
+  },
+  "d7f34e51-45ef-4b33-bc1d-a6e5c75acfc3": {
+    "id": "d7f34e51-45ef-4b33-bc1d-a6e5c75acfc3",
+    "from_id": "04b05e25-978f-4054-91eb-85296dd28564",
+    "to_id": "b03f6205-6848-44eb-972e-2ae131206d9a",
+    "amount": 12.0,
+    "date": "2025-10-19T09:15:11.275900",
+    "status": "pending",
+    "description": "Money request for $12.00"
+  }
+}
