@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException
 from routers.nessie import list_merchants, nessie_make_purchase, get_nessie_account_balance
 import database
 import uuid, httpx, os
-from models import Merchants
+from models import Merchants, Transaction
 
 router = APIRouter()
 NESSIE_API_KEY = os.getenv("NESSIE_API_KEY")
@@ -73,7 +73,6 @@ async def create_merchant(name: str, category: str, city: str = "Austin", state:
         "address": address
     }
 
-
 @router.post("/pay")
 async def pay_merchant(member_id: str, merchant_id: str, amount: float, desc: str = "Merchant purchase"):
     """Allow a user to pay a merchant using their Nessie account."""
@@ -94,18 +93,23 @@ async def pay_merchant(member_id: str, merchant_id: str, amount: float, desc: st
     except Exception as e:
         raise HTTPException(500, f"Purchase failed: {e}")
 
-    # Update local member balance
-    member.balance -= amount
-
-    # Optional: log locally (for dashboards)
-    if not hasattr(member, "merchant_purchases"):
-        member.merchant_purchases = []
-    member.merchant_purchases.append({
-        "purchase_id": purchase["_id"],
-        "merchant_id": merchant_id,
-        "amount": amount,
-        "description": desc
-    })
+    # Update transaction state.
+    mid = str(uuid.uuid4())
+    transaction = Transaction(
+        id=mid,
+        type_transaction="purchased",
+        amount=amount,
+        from_id = member_id,
+        to_id = merchant_id,
+        from_name = member.first_name + " " + member.last_name,
+        to_name = desc,
+        from_debt=member.current_debt,
+        to_debt=0)
+    
+    database.members_db[member_id].balance -= amount
+    database.members_db[member.id].transactions.append(transaction)
+    for k in member.debts:
+        database.members_db[k].transactions.append(transaction)
 
     return {
         "message": f"{member.first_name} spent ${amount} at {desc}",

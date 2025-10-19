@@ -1,6 +1,6 @@
 import json
 from typing import Dict, Any, Optional, Type
-from models import Family, Member, Merchants, Purchase, MoneyRequest, Transaction
+from models import Family, Member, Merchants, MoneyRequest, Transaction
 from pathlib import Path
 from pydantic import BaseModel
 from fastapi.encoders import jsonable_encoder
@@ -11,7 +11,6 @@ families_db: Dict[str, Family] = {}
 members_db: Dict[str, Member] = {}
 transactions_db: Dict[str, Transaction] = {}
 merchants_db: Dict[str, dict] = {}
-purchases_db: Dict[str, dict] = {}
 money_requests_db: Dict[str, MoneyRequest] = {}
 
 def seed_data():
@@ -19,27 +18,36 @@ def seed_data():
         id=str(uuid4()),
         first_name="Chinmay",
         last_name="Mangalwedhe",
-        balance=500.0
+        balance=375.0,
+        nessie_customer_id="68f4e65d9683f20dd51a29f7",
+        nessie_account_id=[{"id": "68f4e65d9683f20dd51a29f7", "_id": "68f4e65d9683f20dd51a29f8"}]
+    )
+    
+    
+    member_three = Member(
+        id=str(uuid4()),
+        first_name="Connor",
+        last_name="Carey",
+        balance=375.0,
+        nessie_customer_id="68f4e6859683f20dd51a29f9",
+        nessie_account_id=[{"id": "68f4e6859683f20dd51a29f9", "_id": "68f4e6859683f20dd51a29fa"}]
     )
     
     member_two = Member(
         id=str(uuid4()),
         first_name="Aiyaz",
         last_name="Mostofa",
-        balance=500.0
+        balance=750.0,
+        current_debt=250.0,
+        debts = {member_one.id: 125.0, member_three.id: 125.0},
+        nessie_customer_id="68f4e6259683f20dd51a29f5",
+        nessie_account_id=[{"id": "68f4e6259683f20dd51a29f5", "_id": "68f4e6259683f20dd51a29f6"}]
     )
-    
-    member_three = Member(
-        id=str(uuid4()),
-        first_name="Connor",
-        last_name="Carey",
-        balance=500.0
-    )
-    
+
     hacktx_fam = Family(
         id=str(uuid4()),
         name="Chinconyaz",
-        members=[member_one, member_two, member_three],
+        members=[member_one.id, member_two.id, member_three.id],
         transactions=[]
     )
     
@@ -114,11 +122,10 @@ def save_mapping(path: str, mapping: Dict[str, Any]) -> None:
 def init():
     if not Path("data").is_dir():
         return
-    global members_db, families_db, merchants_db, purchases_db, money_requests_db, transactions_db
+    global members_db, families_db, merchants_db, money_requests_db, transactions_db
     members_db = load_mapping("data/members.json", Member)
     families_db = load_mapping("data/families.json", Family)
     merchants_db = load_mapping("data/merchants.json", Merchants)
-    purchases_db = load_mapping("data/purchases.json", Purchase)
     money_requests_db = load_mapping("data/money_requests.json", MoneyRequest)
     transactions_db = load_mapping("data/transactions.json", Transaction)
 
@@ -127,6 +134,5 @@ def sync():
     save_mapping("data/members.json", members_db)
     save_mapping("data/families.json", families_db)
     save_mapping("data/merchants.json", merchants_db)
-    save_mapping("data/purchases.json", purchases_db)
     save_mapping("data/money_requests.json", money_requests_db)
     save_mapping("data/transactions.json", transactions_db)

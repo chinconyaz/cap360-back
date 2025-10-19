@@ -1,6 +1,6 @@
 from pathlib import Path
 from fastapi import FastAPI, Request
-from routers import family, members, transactions, merchants
+from routers import family, members, merchants, requests
 import database
 import os
 
@@ -13,8 +13,8 @@ app = FastAPI(
 
 app.include_router(family.router, prefix="/family", tags=["Family"])
 app.include_router(members.router, prefix="/members", tags=["Members"])
-app.include_router(transactions.router, prefix="/transactions", tags=["Transactions"])
 app.include_router(merchants.router, prefix='/merchants', tags=["Merchants"])
+app.include_router(requests.router, prefix='/request', tags=["Money Requests"])
 
 @app.on_event("startup")
 async def on_startup():

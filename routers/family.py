@@ -26,5 +26,5 @@ def get_family_members(family_id: str):
     if database.families_db.get(family_id) is None:
         raise HTTPException(404, "Family not found")
     
-    members = [member for member in database.families_db[family_id].members]
+    members = [database.members_db[member_id] for member_id in database.families_db[family_id].members]
     return {"family_id": family_id, "members": members}
